@@ -1,5 +1,7 @@
 // compile: g++ -o main main.cpp Algoritmo_genetico.cpp -lm
 // run: ./main 281	338	61	299	43	42	398	357	300	339	351	330	273	312	102	448	263	206	246	154	236
+// run: ./main 281	338	61	299	43	42	398	357	300	339	351	330	273	312	102
+
 
 
 #include <iostream>
@@ -50,7 +52,9 @@ int main(int argc, char** argv) {
 
 
   
-  ag.mostrarCidades();
+  ag.mostrar_cidades();
+  ag.gerar_populacao_inicial();
+  ag.mostrar_populacao();
   // ag.removeCidade("Balneario Camborio");
   // ag.mostrarCidades();
   // ag.removeCidade("Blumenau");
