@@ -14,6 +14,23 @@ AlgoritmoGenetico::AlgoritmoGenetico() {
   addCidade("Joinville",           {{0, 90.0}, {1, 70.0}, {2, 30.0}, {3, 80.0}});
 }
 
+/// @brief Cria o algoritmo genético contendo as cidades de entrada
+AlgoritmoGenetico::AlgoritmoGenetico(char** lista_distancias) {
+  
+  int cont = 0;
+  for(char** arg = lista_distancias; *arg != nullptr;) {
+    std::map<size_t, double> distancias_para_cidades;
+
+    for(int i = 0; i < cont; i++){
+      double distancia = std::stod(*arg);
+      distancias_para_cidades.emplace(i, distancia);
+      arg++;
+    }
+    this->addCidade("Cidade_" + std::to_string(cont), distancias_para_cidades);
+    cont++;
+  }
+}
+
 /// @brief Adiciona uma cidade ao conjunto de cidades, bem como suas distâncias para as outras cidades.
 ///
 /// - as distâncias são armazenas apenas as distâncias da cidade de maior índice para as de menor índice.

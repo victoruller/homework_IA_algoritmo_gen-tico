@@ -22,6 +22,7 @@ public:
 class AlgoritmoGenetico {
 public:
   AlgoritmoGenetico();
+  AlgoritmoGenetico(char** lista_distancias);
   virtual bool addCidade(const std::string nome, std::map<size_t, double> distancias_para_cidades);
   virtual bool removeCidade(const std::string nome);
   virtual void mostrarCidades();
