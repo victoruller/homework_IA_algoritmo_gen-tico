@@ -53,14 +53,7 @@ int main(int argc, char** argv) {
 
   
   ag.mostrar_cidades();
-  ag.gerar_populacao_inicial();
-  ag.mostrar_populacao();
-  // ag.removeCidade("Balneario Camborio");
-  // ag.mostrarCidades();
-  // ag.removeCidade("Blumenau");
-  // ag.mostrarCidades();
-  // ag.removeCidade("Itajai");
-  // ag.mostrarCidades();
+  ag.run();
   
   
 }
